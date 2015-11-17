@@ -115,6 +115,9 @@ add_action( 'widgets_init', 'popperscores_widgets_init' );
  */
 function popperscores_scripts() {
 	wp_enqueue_style( 'popperscores-style', get_stylesheet_uri() );
+	
+	// Add Google Fonts: Fira Sans and Merriweather
+	wp_enqueue_style( 'popperscores-google-fonts', 'https://fonts.googleapis.com/css?family=Fira+Sans:400,400italic,700,700italic|Merriweather:400,400italic,700,700italic' );
 
 	wp_enqueue_script( 'popperscores-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 

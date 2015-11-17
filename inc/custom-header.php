@@ -26,8 +26,8 @@ function popperscores_custom_header_setup() {
 	add_theme_support( 'custom-header', apply_filters( 'popperscores_custom_header_args', array(
 		'default-image'          => '',
 		'default-text-color'     => 'ffffff',
-		'width'                  => 1000,
-		'height'                 => 250,
+		'width'                  => 1600,
+		'height'                 => 420,
 		'flex-height'            => true,
 		'wp-head-callback'       => 'popperscores_header_style',
 		'admin-head-callback'    => 'popperscores_admin_header_style',

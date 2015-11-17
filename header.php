@@ -24,13 +24,11 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'popperscores' ); ?></a>
 
-	<header id="masthead" class="site-header" role="banner">
-		
-		<?php if ( get_header_image() ) : ?>
-			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-				<img src="<?php header_image(); ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" height="<?php echo esc_attr( get_custom_header()->height ); ?>" alt="">
-			</a>
-		<?php endif; // End header image check. ?>
+	<?php if ( get_header_image() ) { ?>
+		<header id="masthead" class="site-header" style="background-image: url(<?php header_image(); ?>)" role="banner">
+	<?php } else { ?>
+		<header id="masthead" class="site-header" role="banner">
+	<?php } ?>
 		
 		<div class="site-branding">
 			<?php if ( is_front_page() && is_home() ) : ?>

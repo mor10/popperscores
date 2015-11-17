@@ -32,10 +32,13 @@
 			
 		<?php // Display site icon or first letter as logo ?>	
 		<div class="site-logo">
+			<?php $site_title = get_bloginfo( 'name' ); ?>
 			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-				<div class="screen-reader-text">Go to the home page of <?php bloginfo( 'name' ); ?></div>
+				<div class="screen-reader-text">
+					<?php printf( esc_html__('Go to the home page of %1$s', 'popperscores'), $site_title ); ?>	
+				</div>
 				<div class="site-firstletter" aria-hidden="true">
-					<?php echo substr(get_bloginfo('title'), 0, 1); ?>
+					<?php echo substr($site_title, 0, 1); ?>
 				</div>
 			</a>
 		</div>

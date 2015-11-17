@@ -29,6 +29,14 @@
 	<?php } else { ?>
 		<header id="masthead" class="site-header" role="banner">
 	<?php } ?>
+			
+		<?php // Display site icon or first letter as logo ?>	
+		<div class="site-logo">
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+				<div class="screen-reader-text">Go to the home page of <?php bloginfo( 'name' ); ?></div>
+				Site logo goes here.
+			</a>
+		</div>
 		
 		<div class="site-branding">
 			<?php if ( is_front_page() && is_home() ) : ?>

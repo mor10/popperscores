@@ -747,6 +747,31 @@ a:active {
 	background-size: cover;
 }
 
+
+.site-logo {
+	position: relative;
+}
+
+.site-logo a {
+	position: absolute;
+	z-index: 10;
+	top: 1em;
+	left: 1em;
+	display: block;
+	width: 2em;
+	height: 2em;
+	background: black;
+	border: 2px solid white;
+	color: white;
+	text-decoration: none;
+}
+
+.site-logo a:hover,
+.site-logo a:focus {
+	outline: 2px solid white;
+}
+
+
 .site-branding {
 	text-align: center;
 }

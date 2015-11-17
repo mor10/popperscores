@@ -756,8 +756,15 @@ a:active {
 ## Global
 --------------------------------------------------------------*/
 .site-main {
+	margin: 1.4em;
 	font-size: .8em;
 	line-height: 1.6em;
+}
+
+@media screen and (min-width: 30em) {
+	.site-main {
+		margin: 1.8em;
+	}
 }
 
 @media screen and (min-width: 40em) {
@@ -766,6 +773,12 @@ a:active {
 	}
 }
 
+@media screen and (min-width: 57em) {
+	.site-main {
+		max-width: 45em;
+		margin: 1.8em auto;
+	}
+}
 
 /*--------------------------------------------------------------
 ## Posts and pages

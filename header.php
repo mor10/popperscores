@@ -37,9 +37,15 @@
 				<div class="screen-reader-text">
 					<?php printf( esc_html__('Go to the home page of %1$s', 'popperscores'), $site_title ); ?>	
 				</div>
-				<div class="site-firstletter" aria-hidden="true">
-					<?php echo substr($site_title, 0, 1); ?>
-				</div>
+				<?php
+				if ( has_site_icon() ) {
+					$site_icon = esc_url( get_site_icon_url( 270 ) ); ?>
+					<img class="site-icon" src="<?php echo $site_icon; ?>" alt="">
+				<?php } else { ?>
+					<div class="site-firstletter" aria-hidden="true">
+						<?php echo substr($site_title, 0, 1); ?>
+					</div>
+				<?php } ?>
 			</a>
 		</div>
 		

@@ -747,7 +747,6 @@ a:active {
 	background-size: cover;
 }
 
-
 .site-logo {
 	position: relative;
 }
@@ -771,6 +770,19 @@ a:active {
 	outline: 2px solid white;
 }
 
+.site-firstletter {
+	font-family: 'Fira Sans', sans-serif;
+	font-size: 1.5em;
+	font-weight: 700;
+	text-align: center;
+	line-height: 1.3em;
+}
+
+.site-logo a:hover .site-firstletter,
+.site-logo a:focus .site-firstletter {
+	background: white;
+	color: black;
+}
 
 .site-branding {
 	text-align: center;

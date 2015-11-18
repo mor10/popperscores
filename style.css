@@ -543,8 +543,10 @@ a:active {
 .main-navigation {
 	clear: both;
 	display: block;
-	float: left;
 	width: 100%;
+	font-family: 'Fira Sans', sans-serif;
+	font-weight: 300;
+	font-size: 1em;
 }
 
 .main-navigation ul {
@@ -554,21 +556,38 @@ a:active {
 	padding-left: 0;
 }
 
-.main-navigation a {
-	display: block;
-	padding: 0.8em 0;
+.main-navigation li {
 	position: relative;
-	text-decoration: none;
-}
-
-.main-navigation ul {
-	list-style: none;
-	margin: 0;
 }
 
 .main-navigation ul ul {
 	display: none;
 	margin-left: 0.8em;
+}
+
+.main-navigation a {
+	position: relative;
+	display: block;
+	padding: 0.8em 1em;
+	font-weight: 400;
+	text-decoration: none;
+	line-height: 1.6em;
+	color: white;
+}
+
+.main-navigation a:hover,
+.main-navigation a:focus {
+	background: #fff;
+	color: #000;
+}
+
+.main-navigation a,
+.main-navigation ul ul li:lastchild a {
+	border-bottom: 1px solid white;
+}
+
+.main-navigation ul li:last-child a {
+	border-bottom: none;
 }
 
 .main-navigation ul .toggled-on {
@@ -582,7 +601,9 @@ a:active {
 }
 
 .main-navigation .current-menu-item > a,
-.main-navigation .current-menu-ancestor > a {
+.main-navigation .current-menu-ancestor > a,
+.main-navigation .current_page_item > a,
+.main-navigation .current_page_ancestor > a {
 	font-weight: 700;
 }
 
@@ -591,19 +612,9 @@ a:active {
 	border-top: 0;
 }
 
-.main-navigation .menu-item-has-children > a {
+.main-navigation .menu-item-has-children > a,
+.main-navigation .page_item_has_children > a{
 	padding-right: 48px;
-}
-
-.main-navigation .menu-item-description {
-	color: #707070;
-	color: rgba(51, 51, 51, 0.7);
-	font-family: "Noto Sans", sans-serif;
-	font-size: 12px;
-	font-size: 1.2rem;
-	font-weight: 400;
-	line-height: 1.5;
-	margin-top: 0.5em;
 }
 
 .no-js .main-navigation ul ul {

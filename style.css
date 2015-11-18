@@ -747,6 +747,12 @@ a:active {
 	background-size: cover;
 }
 
+@media screen and (min-width: 50em) {
+	.site-header {
+		min-height: 4em;
+	}
+}
+
 .site-logo {
 	position: relative;
 }

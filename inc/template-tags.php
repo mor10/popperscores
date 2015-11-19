@@ -25,7 +25,7 @@ function popperscores_posted_on() {
 	);
 
 	$posted_on = sprintf(
-		esc_html_x( 'Posted on %s', 'post date', 'popperscores' ),
+		esc_html_x( 'published %s', 'post date', 'popperscores' ),
 		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 	);
 
@@ -34,8 +34,12 @@ function popperscores_posted_on() {
 		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 	);
 
-	echo '<span class="posted-on">' . $posted_on . '</span><span class="byline"> ' . $byline . '</span>'; // WPCS: XSS OK.
-
+	echo '<span class="byline"> ' . $byline . '</span><span class="posted-on">' . $posted_on . '</span>'; // WPCS: XSS OK.
+	if ( ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
+		echo '<span class="comments-link">';
+		comments_popup_link( esc_html__( 'Leave a comment', 'popperscores' ), esc_html__( '1 Comment', 'popperscores' ), esc_html__( '% Comments', 'popperscores' ) );
+		echo '</span>';
+	}
 }
 endif;
 
@@ -57,12 +61,6 @@ function popperscores_entry_footer() {
 		if ( $tags_list ) {
 			printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'popperscores' ) . '</span>', $tags_list ); // WPCS: XSS OK.
 		}
-	}
-
-	if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
-		echo '<span class="comments-link">';
-		comments_popup_link( esc_html__( 'Leave a comment', 'popperscores' ), esc_html__( '1 Comment', 'popperscores' ), esc_html__( '% Comments', 'popperscores' ) );
-		echo '</span>';
 	}
 
 	edit_post_link(

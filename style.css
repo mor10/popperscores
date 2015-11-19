@@ -1118,12 +1118,6 @@ a:active {
 
 @media screen and (min-width: 50em) {
 
-	.has-avatar {
-		display: inline-block;
-		text-align: left;
-		width: 20em;
-	} 	
-
 	.author-avatar {
 		height: 70px;
 		width: 70px;

@@ -681,6 +681,18 @@ a:active {
 	bottom: -2.5em;
 }
 
+/* Make sure the button doesn't hide when menu is open. */
+/*
+.toggled .menu-toggle.hide {
+	bottom: 1em;
+}
+*/
+
+.menu-toggle:hover,
+.menu-toggle:focus {
+	text-decoration: underline;
+}
+
 @media screen and (min-width: 37.5em) {
 	.menu-toggle {
 		display: none;
@@ -689,6 +701,40 @@ a:active {
 		display: block;
 	}
 }
+
+/* Hovering menu */
+/*
+.main-navigation.toggled {
+	position: fixed;
+	bottom: 0;
+	padding: 1em;
+	z-index: 1;
+}
+*/
+/*
+.nav-menu {
+	padding: 1em;
+	margin-bottom: 3em;
+	background-color: #000;
+}
+*/
+/*
+.main-navigation.toggled ul {
+	max-height: calc(100vh - 8em);
+	overflow-y: auto;
+}
+*/
+/*
+.main-navigation.toggled ul ul {
+	display: none;
+}
+*/
+/*
+.main-navigation.toggled ul ul.toggled-on,
+.main-navigation.toggled ul ul.toggled-on > ul {
+	display: block;
+}
+*/
 
 .site-main .comment-navigation,
 .site-main .posts-navigation,

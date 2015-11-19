@@ -1103,10 +1103,6 @@ a:active {
 
 /* Post Meta */
 .entry-meta {
-	/*
-	margin: 0 -1.473684210526316em;
-	padding: 2em 1.473684210526316em;
-	*/
 	padding: 2em 0;
 	font-family: "Fira Sans", sans-serif;
 	font-size: 95%;
@@ -1123,13 +1119,13 @@ a:active {
 
 }
 
-
 /*@media screen and (min-width: 57em) {
 	.entry-meta {
 		position: relative;
 		width: 100%;
 		width: 100vw;
 		left: 0;
+		left: calc((-100vw + 52.2em) / 2);
 		overflow: hidden;
 	}
 }*/

@@ -1057,11 +1057,6 @@ a:active {
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
-/*
-.content-area {
-	overflow-x: hidden;
-}
-*/
 /*--------------------------------------------------------------
 ## Global
 --------------------------------------------------------------*/
@@ -1111,25 +1106,6 @@ a:active {
 	background: #eee;
 }
 
-@media screen and (min-width: 30em) {
-
-/*	.entry-meta {
-		margin: 0 -1.894736842105263em;
-	}*/
-
-}
-
-/*@media screen and (min-width: 57em) {
-	.entry-meta {
-		position: relative;
-		width: 100%;
-		width: 100vw;
-		left: 0;
-		left: calc((-100vw + 52.2em) / 2);
-		overflow: hidden;
-	}
-}*/
-
 .author-avatar {
 	height: 50px;
 	width: 50px;
@@ -1142,19 +1118,19 @@ a:active {
 
 @media screen and (min-width: 50em) {
 
-/*	.has-avatar {
+	.has-avatar {
 		display: inline-block;
 		text-align: left;
 		width: 20em;
-	} 	*/
+	} 	
 
-/*	.author-avatar {
+	.author-avatar {
 		height: 70px;
 		width: 70px;
 		float: left;
 		margin-right: 1.5em;
 		margin-bottom: 0;
-	}*/
+	}
 	
 }
 

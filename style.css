@@ -764,6 +764,7 @@ a:active {
 	/* Display the menu items in a horizontal order */
 	.main-navigation li {
 		display: inline-block;
+		border: none;
 	}
 	
 	/* Add an outline to the drop-down menus */

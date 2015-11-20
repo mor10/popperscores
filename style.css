@@ -1442,13 +1442,35 @@ img.alignleft {
 	margin-bottom: 1.5em;
 }
 
+.centered-image {
+	max-width: calc(100% + 2.8em);
+	margin: 1.5em -1.4em;
+}
+
+@media screen and (min-width: 30em) {
+	
+	.centered-image {
+		max-width: calc(100% + 3.6em);
+		margin: 1.5em -1.8em;
+	}
+
+}
 @media screen and (min-width: 50em) {
+	
 	img.alignright {
 		margin-right: -1.5em;
 	}
+	
 	img.alignleft {
 		margin-left: -1.5em;
 	}
+	
+	.centered-image {
+		max-width: calc(100% + 6em);
+		margin-right: -3em;
+		margin-left: -3em;
+	}
+	
 }
 
 @media screen and (min-width: 74em) {
@@ -1459,6 +1481,7 @@ img.alignleft {
 		margin-left: -3em;
 	}
 }
+
 /*--------------------------------------------------------------
 ## Galleries
 --------------------------------------------------------------*/

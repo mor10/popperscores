@@ -13,6 +13,14 @@
 	<header class="entry-header">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 
+		<?php
+		if ( has_excerpt( $post->ID ) ) {
+			echo '<div class="deck">';
+			echo '<p>' . get_the_excerpt() . '</p>';
+			echo '</div><!-- .deck -->';
+		}
+		?>
+		
 		<div class="entry-meta">
 			<?php popperscores_posted_on(); ?>
 		</div><!-- .entry-meta -->

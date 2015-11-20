@@ -1060,11 +1060,11 @@ a:active {
 /*--------------------------------------------------------------
 ## Global
 --------------------------------------------------------------*/
-/*
+
 .content-area {
 	overflow-x: hidden;
 }
-*/
+
 
 .site-main {
 	margin: 1.4em;
@@ -1118,7 +1118,7 @@ a:active {
 		margin: 0 -1.894736842105263em;
 	}
 }
-/*
+
 @media screen and (min-width: 57em) {
 	.entry-meta {
 		position: relative;
@@ -1129,7 +1129,7 @@ a:active {
 		overflow: hidden;
 	}
 }
-*/
+
 .author-avatar {
 	height: 50px;
 	width: 50px;

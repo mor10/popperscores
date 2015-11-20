@@ -393,6 +393,21 @@ q {
 	quotes: "" "";
 }
 
+blockquote {
+    font-size: 1.5em;
+    line-height: 1.4em;
+    margin: 1.5em 0 1.5em 2em;
+    position: relative;
+}
+
+blockquote::before {
+    font-family: 'FontAwesome';
+    content: "\f10d";
+    position: absolute;
+    left: -2em;
+    color: #ededed;
+}
+
 hr {
 	background-color: #ccc;
 	border: 0;

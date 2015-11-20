@@ -37,10 +37,10 @@ function popperscores_posted_on() {
 	// Display the author avatar if the author has a Gravatar
 	$author_id = get_the_author_meta( 'ID' );
 	if ( popperscores_validate_gravatar( $author_id ) ) {
-		//echo '<div class="meta-content has-avatar">';
+		echo '<div class="meta-content has-avatar">';
 		echo '<div class="author-avatar">' . get_avatar( $author_id ) . '</div>';
 	} else {
-		//echo '<div class="meta-content">';
+		echo '<div class="meta-content">';
 	}
 	
 	echo '<span class="byline"> ' . $byline . '</span><span class="posted-on">' . $posted_on . '</span>'; // WPCS: XSS OK.
@@ -49,7 +49,7 @@ function popperscores_posted_on() {
 		comments_popup_link( esc_html__( 'Leave a comment', 'popperscores' ), esc_html__( '1 Comment', 'popperscores' ), esc_html__( '% Comments', 'popperscores' ) );
 		echo '</span>';
 	}
-	//echo '</div><!-- .meta-content -->';
+	echo '</div><!-- .meta-content -->';
 }
 endif;
 

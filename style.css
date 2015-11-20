@@ -43,6 +43,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Infinite scroll
 # Media
 	## Captions
+	## Images
 	## Galleries
 --------------------------------------------------------------*/
 
@@ -260,9 +261,10 @@ table {
 	border-spacing: 0;
 }
 
-td,
+td, 
 th {
-	padding: 0;
+	border: 1px solid #999;
+	padding: 0.5em;
 }
 
 /*--------------------------------------------------------------
@@ -1409,6 +1411,20 @@ object {
 
 .wp-caption-text {
 	text-align: center;
+}
+
+/*--------------------------------------------------------------
+## Images
+--------------------------------------------------------------*/
+
+img.aligncenter {
+	margin-top: 2em;
+	margin-bottom: 2em;
+}
+
+img.alignright,
+img.alignleft {
+	margin-bottom: 1.5em;
 }
 
 /*--------------------------------------------------------------

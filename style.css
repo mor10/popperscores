@@ -887,6 +887,16 @@ a:active {
 	border-color: #000;
 }
 
+.post-navigation .post-title {
+	font-size: 1.2em;
+	font-weight: 700;
+}
+
+.post-navigation a:hover .post-title,
+.post-navigation a:focus .post-title {
+	text-decoration: underline;
+}
+
 .nav-previous {
 	padding-bottom: 1em;
 }
@@ -929,15 +939,7 @@ a:active {
 		padding-bottom: 1em;
 	}
 }
-.post-navigation .post-title {
-	font-size: 1.2em;
-	font-weight: 700;
-}
 
-.post-navigation a:hover .post-title,
-.post-navigation a:focus .post-title {
-	text-decoration: underline;
-}
 
 /*--------------------------------------------------------------
 # Accessibility

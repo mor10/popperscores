@@ -1442,6 +1442,23 @@ img.alignleft {
 	margin-bottom: 1.5em;
 }
 
+@media screen and (min-width: 50em) {
+	img.alignright {
+		margin-right: -1.5em;
+	}
+	img.alignleft {
+		margin-left: -1.5em;
+	}
+}
+
+@media screen and (min-width: 74em) {
+	img.alignright {
+		margin-right: -3em;
+	}
+	img.alignleft {
+		margin-left: -3em;
+	}
+}
 /*--------------------------------------------------------------
 ## Galleries
 --------------------------------------------------------------*/

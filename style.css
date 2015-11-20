@@ -1060,6 +1060,12 @@ a:active {
 /*--------------------------------------------------------------
 ## Global
 --------------------------------------------------------------*/
+/*
+.content-area {
+	overflow-x: hidden;
+}
+*/
+
 .site-main {
 	margin: 1.4em;
 	font-size: .8em;
@@ -1098,7 +1104,8 @@ a:active {
 
 /* Post Meta */
 .entry-meta {
-	padding: 2em 0;
+	margin: 0 -1.473684210526316em;
+	padding: 2em 1.473684210526316em;
 	font-family: "Fira Sans", sans-serif;
 	font-size: 95%;
 	font-style: italic;
@@ -1106,6 +1113,23 @@ a:active {
 	background: #eee;
 }
 
+@media screen and (min-width: 30em) {
+	.entry-meta {
+		margin: 0 -1.894736842105263em;
+	}
+}
+/*
+@media screen and (min-width: 57em) {
+	.entry-meta {
+		position: relative;
+		width: 100%;
+		width: 100vw;
+		left: 0;
+		left: calc((-100vw + 52.2em) / 2);
+		overflow: hidden;
+	}
+}
+*/
 .author-avatar {
 	height: 50px;
 	width: 50px;

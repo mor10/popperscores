@@ -1603,7 +1603,12 @@ a:active {
 	word-wrap: break-word;
 }
 
-
+.bypostauthor .avatar {
+	box-sizing: content-box;
+	border: 5px solid #c3c3c3;
+	margin-top: -5px;
+	margin-left: -5px;
+}
 
 /*--------------------------------------------------------------
 # Infinite scroll

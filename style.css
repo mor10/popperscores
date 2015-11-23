@@ -1832,6 +1832,27 @@ img.alignleft {
 	}
 }
 
+.featured-image {
+	margin-top: -1.4em;
+	margin-bottom: -1.2em;
+}
+
+@media screen and (min-width: 30em) {
+	.featured-image {
+		margin-top: -1.8em;
+	}
+}
+
+@media screen and (min-width: 50em ) {
+	.featured-image {
+		margin-top: 3em;
+	}
+}
+
+.featured-image img {
+	display: block;
+	margin: 0 auto;
+}
 /*--------------------------------------------------------------
 ## Galleries
 --------------------------------------------------------------*/

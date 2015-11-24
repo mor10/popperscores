@@ -1951,6 +1951,11 @@ img.alignleft {
 	margin: 0 auto;
 }
 
+.featured-image a:hover img,
+.featured-image a:focus img {
+	outline: dotted;
+}
+
 /*--------------------------------------------------------------
 ## Galleries
 --------------------------------------------------------------*/

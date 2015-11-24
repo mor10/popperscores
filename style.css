@@ -1337,8 +1337,20 @@ a:active {
 }
 
 .sticky {
+	position: relative;
 	display: block;
 }
+
+.sticky::before {
+	position: absolute;
+	top: -1.5em;
+	right: 0;
+	display: block;
+	font-family: "FontAwesome";
+	content: "\f08d";
+}
+
+
 
 .hentry {
 	margin: 0 0 1.5em;

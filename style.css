@@ -855,7 +855,8 @@ a:active {
 ## Other Navigation
 --------------------------------------------------------------*/
 .comment-navigation,
-.post-navigation {
+.post-navigation,
+.paging-navigation {
 	padding: 2em 0;
 	font-family: "Fira Sans", sans-serif;
 	text-align: left;
@@ -864,7 +865,8 @@ a:active {
 
 @media screen and (min-width: 50em) {
 	.comment-navigation,
-	.post-navigation {
+	.post-navigation,
+.paging-navigation {
 		padding: 2em 3em;
 	}
 }
@@ -876,7 +878,8 @@ a:active {
 }
 
 .comment-navigation a,
-.post-navigation a {
+.post-navigation a,
+.paging-navigation a {
 	display: block;
 	width: 100%;
 	text-decoration: none;
@@ -887,7 +890,9 @@ a:active {
 .comment-navigation a:hover,
 .comment-navigation a:focus,
 .post-navigation a:hover,
-.post-navigation a:focus {
+.post-navigation a:focus,
+.paging-navigation a:hover,
+.paging-navigation a:focus {
 	border-color: #000;
 }
 
@@ -946,6 +951,31 @@ a:active {
 	}
 }
 
+.paging-navigation {
+	margin-top: -2em;
+	text-align: center;
+}
+
+.paging-navigation ul {
+	display: inline-block;
+	padding: 0;
+	list-style-type: none;
+
+}
+
+.paging-navigation li {
+	display: inline-block;
+}
+
+.paging-navigation li a {
+	padding: .3em 1em;
+	margin: .4em .2em;
+}
+
+.paging-navigation .current {
+	padding: .8em 1.1em;
+	font-weight: 700;
+}
 
 /*--------------------------------------------------------------
 # Accessibility

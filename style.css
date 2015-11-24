@@ -1181,6 +1181,20 @@ a:active {
 	}
 }
 
+.page-title {
+	text-align: center;
+	font-style: italic;
+	font-size: 1.4em;
+}
+
+.page-header::after {
+	display: block;
+	content: "";
+	width: 3.5em;
+	border-bottom: 1px solid #c3c3c3;
+	margin: 2em auto;
+}
+
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/

@@ -40,7 +40,7 @@ get_header(); ?>
 
 			<?php endwhile; ?>
 
-			<?php the_posts_navigation(); ?>
+			<?php popperscores_paging_nav(); ?>
 
 		<?php else : ?>
 

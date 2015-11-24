@@ -1181,6 +1181,9 @@ a:active {
 	}
 }
 
+/*--------------------------------------------------------------
+## Indexes
+--------------------------------------------------------------*/
 .page-title {
 	text-align: center;
 	font-style: italic;
@@ -1193,6 +1196,43 @@ a:active {
 	width: 3.5em;
 	border-bottom: 1px solid #c3c3c3;
 	margin: 2em auto;
+}
+
+.entry-title.index-excerpt {
+	margin-top: 2em;
+	margin-bottom: .5em;
+	font-size: 1.5em;
+}
+
+.entry-header .index-entry-meta {
+	font-size: .8em;
+}
+
+.entry-content.index-excerpt {
+	margin-top: .3em;
+}
+
+@media screen and (min-width: 30em) {
+	.entry-title.index-excerpt {
+		margin-top: 1.5em;
+		font-size: 2em;
+	}
+
+	.index-entry-meta {
+		font-size: 1em;
+	}
+
+	.index-entry-meta .byline,
+	.index-entry-meta .posted-on,
+	.index-entry-meta .comments-link {
+		display: inline-block;
+	}
+
+	.index-entry-meta .byline::after,
+	.index-entry-meta .comments-link::before {
+		content: "|";
+		padding: 0 1em;
+	}
 }
 
 /*--------------------------------------------------------------
@@ -1408,7 +1448,8 @@ a:active {
 	width: 3.5em;
 }
 
-.entry-footer {
+.entry-footer,
+.index-entry-meta {
 	font-family: "Fira Sans", sans-serif;
 	font-size: 95%;
 	font-style: italic;
@@ -1435,7 +1476,8 @@ a:active {
 	padding: 0;
 }
 
-.entry-footer span a {
+.entry-footer span a,
+.index-entry-meta a {
 	font-weight: 700;
 	text-decoration: none;
 	color: #000;

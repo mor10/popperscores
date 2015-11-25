@@ -41,6 +41,7 @@
 		<a href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark">
 			<?php
 				printf(
+					/* Translators: %s = Name of the current post. */
 					wp_kses( __( 'Continue reading %s', 'popperscores' ), array( 'span' => array( 'class' => array() ) ) ),
 					the_title( '<span class="screen-reader-text">"', '"</span>', false )
 				);

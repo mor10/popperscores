@@ -1311,6 +1311,21 @@ a:active {
 	display: none;
 }
 
+.error404 input[type="search"],
+.search-no-results input[type="search"] {
+	width: 100%;
+	margin-bottom: 4em;
+	padding: .5em 1em;
+}
+
+.error404 .search-submit,
+.search-no-results .search-submit {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
 
 /*--------------------------------------------------------------
 ## Posts and pages

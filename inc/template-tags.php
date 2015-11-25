@@ -291,15 +291,3 @@ function popperscores_paging_nav() {
 	endif;
 }
 endif;
-
-function popperscores_continue_reading() {
-	$continue_reading = sprintf( '<div class="continue-reading"><a href="%1$s" rel="bookmark">%2$s</a></div>',
-		esc_url( get_permalink() ),
-		sprintf(
-			/* Translators: %s = Name of the current post. */
-			wp_kses( __( 'Continue reading %s', 'popperscores' ), array( 'span' => array( 'class' => array() ) ) ),
-			the_title( '<span class="screen-reader-text">"', '"</span>', false )
-		)
-	);
-	return $continue_reading;
-}

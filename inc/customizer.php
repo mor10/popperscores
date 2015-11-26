@@ -48,3 +48,20 @@ function popperscores_customize_preview_js() {
 	wp_enqueue_script( 'popperscores_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20130508', true );
 }
 add_action( 'customize_preview_init', 'popperscores_customize_preview_js' );
+
+/**
+ * Inject Customizer CSS when appropriate
+ */
+
+function popperscores_customizer_css() {
+	$header_color = get_theme_mod('header_color');
+	
+	?>
+<style type="text/css">
+	.site-header {
+		background-color: <?php echo $header_color; ?>
+	}
+</style>
+	<?php
+}
+add_action( 'wp_head', 'popperscores_customizer_css' );

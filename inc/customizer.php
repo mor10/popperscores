@@ -49,7 +49,7 @@ function popperscores_customize_register( $wp_customize ) {
 	);
 
 	// Add sidebar layout controls
-	$wp_customize->add_control(	'popper_layout_control',
+	$wp_customize->add_control(	'layout_control',
 		array(
 			'settings' => 'layout_setting',
 			'type' => 'radio',

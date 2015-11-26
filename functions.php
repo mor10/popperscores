@@ -100,7 +100,7 @@ add_action( 'after_setup_theme', 'popperscores_content_width', 0 );
  */
 function popperscores_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'popperscores' ),
+		'name'          => esc_html__( 'Widget Area', 'popperscores' ),
 		'id'            => 'sidebar-1',
 		'description'   => '',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',

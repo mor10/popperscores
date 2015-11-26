@@ -27,7 +27,7 @@ function popperscores_customize_register( $wp_customize ) {
 		'transport' => 'postMessage',
 	));
 	
-	// Add control
+	// Add header background color control
 	$wp_customize->add_control(
 		new WP_Customize_Color_Control(
 			$wp_customize,
@@ -35,6 +35,30 @@ function popperscores_customize_register( $wp_customize ) {
 				'label' => __( 'Header Background Color', 'popperscores' ),
 				'section' => 'colors',
 			)
+		)
+	);
+	
+	// Create sidebar layout setting
+	$wp_customize->add_setting(	'layout_setting',
+		array(
+			'default' => 'no-sidebar',
+			'type' => 'theme_mod',
+			'sanitize_callback' => 'popperscores_sanitize_layout', 
+			'transport' => 'postMessage'
+		)
+	);
+
+	// Add sidebar layout controls
+	$wp_customize->add_control(	'popper_layout_control',
+		array(
+			'settings' => 'layout_setting',
+			'type' => 'radio',
+			'label' => __( 'Sidebar position', 'popperscores' ),
+			'choices' => array(
+				'no-sidebar' => __( 'No sidebar (default)', 'popperscores' ),
+				'sidebar-left' => __( 'Left sidebar', 'popperscores' ),
+				'sidebar-right' => __( 'Right sidebar', 'popperscores' )
+			),	
 		)
 	);
 	

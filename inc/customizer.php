@@ -14,32 +14,6 @@ function popperscores_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
-
-	/**
-	 * Custom Customizer Customizations
-	 */
-	
-	// Add heading color setting
-	$wp_customize->add_setting( 'header_color', array(
-		'default' => '#000000',
-		'type' => 'theme_mod',
-		'sanitize_callback' => 'sanitize_hex_color',
-		'transport' => 'postMessage',
-	));
-	
-	// Add control
-	$wp_customize->add_control(
-		new WP_Customize_Color_Control(
-			$wp_customize,
-			'header_color', array(
-				'label' => __( 'Header Background Color', 'popperscores' ),
-				'section' => 'colors',
-				'settings' => 'header_color',
-			)
-		)
-	);
-	
-	
 }
 add_action( 'customize_register', 'popperscores_customize_register' );
 

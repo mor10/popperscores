@@ -131,18 +131,9 @@ body {
  blockquote::before {
  	position: absolute;
  	left: -2em;
- 	font-family: "icons";
+ 	font-family: "FontAwesome";
  	content: "\f10d";
  	color: #ededed;
- }
-
- blockquote::after {
-     position: absolute;
-     right: -2em;
-     bottom: 0;
-     font-family: "icons";
-     content: "\f10e";
-     color: #ededed;
  }
 
  hr {
@@ -282,7 +273,7 @@ body {
 	top: -3px;
 	left: -1.4em;
 	display: block;
-	font-family: "icons";
+	font-family: "FontAwesome";
 	font-style: normal;
 	color: #808080;
 	content: "\f148";

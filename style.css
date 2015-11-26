@@ -38,6 +38,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Widgets
 # Content
 	## Global
+	## Indexes
     ## Posts and pages
 	## Asides
 	## Comments
@@ -1165,13 +1166,69 @@ a:active {
 /*--------------------------------------------------------------
 # Widgets
 --------------------------------------------------------------*/
+#secondary {
+	position: relative;
+	padding: 1.8em 1.4em 0;
+	background-color: #ededed;
+}
+
 .widget {
 	margin: 0 0 1.5em;
+	padding: 1.8em;
+	background: #fff;
+}
+
+.widget-title {
+	margin-top: .5em;
+	margin-bottom: .5em;
+	font-size: 1em;
+	text-transform: uppercase;
+}
+
+.widget ul,
+.widget ol {
+	padding: .7em 0 0;
+	margin: 0;
+	font-family: "Fira Sans", sans-serif;
+	list-style-type: none;
+}
+
+.site-content .widget li {
+	display: block;
+	padding: .3em 0;
+}
+
+.widget li ul,
+.widget li ol {
+	margin-left: .5em;
+}
+
+.widget li:last-child {
+	padding-bottom: .35em;
+}
+
+@media screen and (min-width: 30em) {
+	.widget li ul,
+	.widget li ol {
+		margin-left: 1em;
+	}
+}
+
+.widget a {
+	font-weight: 500;
+	text-decoration: none;
+	font-size: .9em;
+}
+
+.widget a:hover,
+.widget a:focus {
+	text-decoration: underline;
 }
 
 /* Make sure select elements fit in widgets. */
 .widget select {
-	max-width: 100%;
+	width: 100%;
+	padding: .5em;
 }
 
 /*--------------------------------------------------------------

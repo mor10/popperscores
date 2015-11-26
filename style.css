@@ -1178,6 +1178,21 @@ a:active {
 	background: #fff;
 }
 
+@media screen and (min-width: 45em) {
+	#secondary {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		padding: 1.8em;
+	}
+	
+	.widget {
+		float: left;
+		width: 300px;
+		margin: 0 .9em 1.8em;
+	}
+}
+
 .widget-title {
 	margin-top: .5em;
 	margin-bottom: .5em;

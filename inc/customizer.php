@@ -38,6 +38,13 @@ function popperscores_customize_register( $wp_customize ) {
 		)
 	);
 	
+	// Add section to the Customizer
+	$wp_customize->add_section( 'popperscores-options', array(
+		'title' => __( 'Theme Options', 'popperscores' ),
+		'capability' => 'edit_theme_options',
+		'description' => __( 'Change the default display options for the theme.', 'popperscores' ),
+	));
+	
 	// Create sidebar layout setting
 	$wp_customize->add_setting(	'layout_setting',
 		array(
@@ -58,7 +65,8 @@ function popperscores_customize_register( $wp_customize ) {
 				'no-sidebar' => __( 'No sidebar (default)', 'popperscores' ),
 				'sidebar-left' => __( 'Left sidebar', 'popperscores' ),
 				'sidebar-right' => __( 'Right sidebar', 'popperscores' )
-			),	
+			),
+			'section' => 'popperscores-options',
 		)
 	);
 	

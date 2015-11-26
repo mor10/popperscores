@@ -1388,28 +1388,7 @@ a:active {
 
 /* Rules for sidebar left and sidebar right */
 @media screen and (min-width: 65em) {
-	/* Unified styles */
-	.sidebar-right .widget::after,
-	.sidebar-left .widget::after {
-		display: block;
-		width: 33%;
-		margin: 4em auto;
-		content: "";
-		border-bottom: 1px solid #c3c3c3;
-	}
-
-	.sidebar-right #secondary,
-	.sidebar-left #secondary {
-		background-color: #fff;
-		padding: 1.8em 0 0;
-		margin: 0;
-	}
-	.sidebar-right .widget,
-	.sidebar-left .widget {
-		padding: 0 1.8em;
-		margin-bottom: 0;
-	}
-
+	
 	/* Sidebar Right layouts */
 	.sidebar-right .content-area {
 		float: left;
@@ -1445,6 +1424,31 @@ a:active {
 		padding: 0 1.5em;
 		border-right: 1px solid #ededed;
 	}
+	
+	/* Unified styles */
+	.sidebar-right #secondary,
+	.sidebar-left #secondary {
+		background-color: #fff;
+		padding: 1.8em 0 0;
+		margin: 0;
+	}
+	
+	.sidebar-right .widget,
+	.sidebar-left .widget {
+		padding: 0 1.8em;
+		margin-bottom: 0;
+	}
+	
+	.sidebar-right .widget::after,
+	.sidebar-left .widget::after {
+		display: block;
+		width: 33%;
+		margin: 4em auto;
+		content: "";
+		border-bottom: 1px solid #c3c3c3;
+	}
+	
+	
 
 }
 

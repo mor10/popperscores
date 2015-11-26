@@ -74,6 +74,17 @@ function popperscores_customize_preview_js() {
 add_action( 'customize_preview_init', 'popperscores_customize_preview_js' );
 
 /**
+ * Sanitize layout options
+ */
+
+function popperscores_sanitize_layout( $value ) {
+	if ( !in_array( $value, array( 'sidebar-left', 'sidebar-right', 'no-sidebar' ) ) ) {
+		$value = 'no-sidebar';
+	}
+	return $value;
+}
+
+/**
  * Inject Customizer CSS when appropriate
  */
 

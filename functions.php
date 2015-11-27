@@ -77,6 +77,11 @@ function popperscores_setup() {
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
+	
+	/**
+	 * Add editor styles
+	 */
+	add_editor_style( array( 'inc/editor-style.css', 'fonts/custom-fonts.css', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css' ) );
 }
 endif; // popperscores_setup
 add_action( 'after_setup_theme', 'popperscores_setup' );

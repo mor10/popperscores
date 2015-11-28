@@ -134,7 +134,7 @@
 		position = $(this).scrollTop();
 	});
 	
-	// Handle center aligned images to make them full width
-	$( 'p' ).has( 'img.aligncenter' ).addClass( 'centered-image' );
+	// Wrap centered images in a new figure element
+	$( 'img.aligncenter' ).wrap( '<figure class="centered-image"></figure>');
 	
 } )( jQuery );

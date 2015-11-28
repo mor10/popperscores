@@ -78,7 +78,7 @@
 			self = self.parentElement;
 		}
 	}
-	
+
 	function initMainNavigation( container ) {
 		// Add dropdown toggle that display child menu items.
 		container.find( '.menu-item-has-children > a, .page_item_has_children > a' ).after( '<button class="dropdown-toggle" aria-expanded="false">' + screenReaderText.expand + '</button>' );
@@ -110,7 +110,7 @@
 			});
 		}
 	});
-	
+
 	// Hide/show toggle button on scroll
 
 	var position, direction, previous;
@@ -120,21 +120,21 @@
 			direction = 'down';
 			if(direction !== previous){
 				$('.menu-toggle').addClass('hide');
-				
+
 				previous = direction;
 			}
 		} else {
 			direction = 'up';
 			if(direction !== previous){
 				$('.menu-toggle').removeClass('hide');
-				
+
 				previous = direction;
 			}
 		}
 		position = $(this).scrollTop();
 	});
-	
-	// Handle center aligned images to make them full width
-	$( 'p' ).has( 'img.aligncenter' ).addClass( 'centered-image' );
-	
+
+	// Wrap centered images in a new figure element
+	$( 'img.aligncenter' ).wrap( '<figure class="centered-image"></figure>');
+
 } )( jQuery );

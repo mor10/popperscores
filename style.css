@@ -1,10 +1,10 @@
 /*
 Theme Name: Popperscores
-Theme URI: http://underscores.me/
+Theme URI: http://lynda.com/
 Author: Morten Rand-Hendriksen
 Author URI: http://lynda.com/mor10
 Description: A new awesome theme to showcase awesome content.
-Version: 1.0.0
+Version: 0.0.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: popperscores
@@ -33,8 +33,10 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Accessibility
 # Alignments
 # Clearings
+# Header
 # Widgets
 # Content
+	## Global
     ## Posts and pages
 	## Asides
 	## Comments
@@ -271,11 +273,16 @@ button,
 input,
 select,
 textarea {
-	color: #404040;
-	font-family: sans-serif;
+	color: #000;
+	font-family: 'Merriweather', serif;
 	font-size: 16px;
 	font-size: 1rem;
 	line-height: 1.5;
+}
+
+.site-content {
+	font-size: 1.125em;
+	line-height: 1.6em;
 }
 
 h1,
@@ -284,8 +291,20 @@ h3,
 h4,
 h5,
 h6 {
+	font-family: 'Fira Sans', sans-serif;
 	clear: both;
+	line-height: 1.3em;
+	margin-top: 2.5rem;
+	margin-bottom: 1rem;
 }
+
+h1 { font-size: 2.4em; }
+h2 { font-size: 2.2em; }
+h3 { font-size: 2em; }
+h4 { font-size: 1.8em; }
+h5 { font-size: 1.6em; }
+h6 { font-size: 1.4em; }
+
 
 p {
 	margin-bottom: 1.5em;
@@ -721,6 +740,97 @@ a:active {
 }
 
 /*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+.site-header {
+	background-color: #000;
+	background-size: cover;
+}
+
+.site-logo {
+	position: relative;
+}
+
+.site-logo a {
+	position: absolute;
+	z-index: 10;
+	top: 1em;
+	left: 1em;
+	display: block;
+	width: 2em;
+	height: 2em;
+	background: black;
+	border: 2px solid white;
+	color: white;
+	text-decoration: none;
+}
+
+.site-logo a:hover,
+.site-logo a:focus {
+	outline: 2px solid white;
+}
+
+.site-firstletter {
+	font-family: 'Fira Sans', sans-serif;
+	font-size: 1.5em;
+	font-weight: 700;
+	text-align: center;
+	line-height: 1.3em;
+}
+
+.site-logo a:hover .site-firstletter,
+.site-logo a:focus .site-firstletter {
+	background: white;
+	color: black;
+}
+
+.site-branding {
+	text-align: center;
+}
+
+.site-title {
+	margin: 1.7em 1em 0;
+	font-family: 'Fira Sans', sans-serif;
+	font-size: 2.4em;
+	font-weight: bold;
+	line-height: 1.3em;
+	color: #fff;
+	text-transform: uppercase;
+	word-break: break-word;
+}
+
+@media screen and (max-width: 30em) {
+	.site-title {
+		font-size: 2em;
+	}
+}
+
+.site-title a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.site-title a:hover,
+.site-title a:focus {
+	text-decoration: underline;
+}
+
+.site-title::after {
+	display: block;
+	content: "";
+	margin: .7em auto 0;
+	width: 3em;
+	border-bottom: solid 1px #fff;
+	opacity: .5;
+}
+
+.site-description {
+	margin: 2em 2em 3em;
+	font-size: 110%;
+	color: #fff;
+}
+
+/*--------------------------------------------------------------
 # Widgets
 --------------------------------------------------------------*/
 .widget {
@@ -735,6 +845,34 @@ a:active {
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Global
+--------------------------------------------------------------*/
+.site-main {
+	margin: 1.4em;
+	font-size: .8em;
+	line-height: 1.6em;
+}
+
+@media screen and (min-width: 30em) {
+	.site-main {
+		margin: 1.8em;
+	}
+}
+
+@media screen and (min-width: 40em) {
+	.site-main {
+		font-size: 1em;
+	}
+}
+
+@media screen and (min-width: 57em) {
+	.site-main {
+		max-width: 45em;
+		margin: 1.8em auto;
+	}
+}
+
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/

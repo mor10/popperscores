@@ -41,6 +41,7 @@ function popperscores_setup() {
 	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 	 */
 	add_theme_support( 'post-thumbnails' );
+	set_post_thumbnail_size( 828, 360, true );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
@@ -99,7 +100,7 @@ add_action( 'after_setup_theme', 'popperscores_content_width', 0 );
  */
 function popperscores_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'popperscores' ),
+		'name'          => esc_html__( 'Widget Area', 'popperscores' ),
 		'id'            => 'sidebar-1',
 		'description'   => '',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
@@ -115,9 +116,19 @@ add_action( 'widgets_init', 'popperscores_widgets_init' );
  */
 function popperscores_scripts() {
 	wp_enqueue_style( 'popperscores-style', get_stylesheet_uri() );
-
-	wp_enqueue_script( 'popperscores-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
-
+	
+	// Add Google Fonts: Fira Sans and Merriweather
+	wp_enqueue_style( 'popperscores-local-fonts', get_template_directory_uri() . '/fonts/custom-fonts.css' );
+	
+	// Add Font Awesome icons (http://fontawesome.io) 
+	wp_enqueue_style( 'popperscores-fontawesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css' );
+	
+	wp_enqueue_script( 'popperscores-navigation', get_template_directory_uri() . '/js/functions.js', array( 'jquery' ), '20120206', true );
+	wp_localize_script( 'popperscores-navigation', 'screenReaderText', array(
+		'expand'   => '<span class="screen-reader-text">' . __( 'expand child menu', 'popperscores' ) . '</span>',
+		'collapse' => '<span class="screen-reader-text">' . __( 'collapse child menu', 'popperscores' ) . '</span>',
+	) );
+	
 	wp_enqueue_script( 'popperscores-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

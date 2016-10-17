@@ -654,7 +654,6 @@ a:active {
 	color: #000;
 }
 
-
 .dropdown-toggle.toggle-on:after {
 	content: "\f077";
 }
@@ -663,6 +662,23 @@ a:active {
 .menu-toggle,
 .main-navigation.toggled ul {
 	display: block;
+}
+
+.menu-toggle {
+	position: fixed;
+	z-index: 100;
+	bottom: 1em;
+	left: 1em;
+	font-size: 1em;
+	text-transform: uppercase;
+	background-color: #000;
+	color: #fff;
+	border: solid 2px #fff;
+	transition: all ease-out 400ms;
+}
+
+.menu-toggle.hide {
+	bottom: -2.5em;
 }
 
 @media screen and (min-width: 37.5em) {
